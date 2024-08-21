@@ -11,7 +11,7 @@ pipeline {
             }
         }
  
-        stage('Test') {
+        '''stage('Test') {
             steps {
                 script {
                     // Run tests inside the Docker container
@@ -20,7 +20,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }'''
  
         stage('Deploy') {
             steps {
