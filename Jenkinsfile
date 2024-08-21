@@ -11,16 +11,7 @@ pipeline {
             }
         }
  
-        '''stage('Test') {
-            steps {
-                script {
-                    // Run tests inside the Docker container
-                    docker.image('my-app:latest').inside {
-                        sh 'npm test'  // or any other test command
-                    }
-                }
-            }
-        }'''
+        
  
         stage('Deploy') {
             steps {
